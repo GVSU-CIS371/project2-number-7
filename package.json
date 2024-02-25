@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1",
-    "npx": "^10.2.2",
+    "npx": "^3.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "vite": "^5.0.8"

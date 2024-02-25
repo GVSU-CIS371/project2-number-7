@@ -9,8 +9,13 @@ function generateProductHTML(product: Product): string {
             </div>`;
 }
 
-function renderProducts(prods: Product[]): void {
-    // your code
+function renderProducts(prods: Product[]): void {    
+    const allProductHTML = prods.map((prod: Product) => generateProductHTML(prod));
+    let mainTop = document.getElementById("main-container");
+
+    for(const prodHTML of allProductHTML){
+        mainTop!.innerHTML += prodHTML;
+    }
 }
 
 function getByCategory(category: string): void {
