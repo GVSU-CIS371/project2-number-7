@@ -51,7 +51,22 @@
         });
 
         // - "Groceries" should display all products categorized as "Groceries."
+
+        const groceries = document.getElementById("groceries");
+
+        groceries?.addEventListener("click", (event) => {
+          event.preventDefault();
+          getByCategory("Groceries")
+        })
+
         // - "Best Seller" should display all products with a rating greater than 4.5.
+
+        // const bestSeller = document.getElementById("bestSeller")
+
+        bestSeller?.addEventListener("click", (event) => {
+          event.preventDefault();
+          getByRating(4.5);
+        })
 
         
         
