@@ -19,7 +19,9 @@ function renderProducts(prods: Product[]): void {
 }
 
 function getByCategory(category: string): void {
-    // your code
+    const selected = products.filter((x: Product) => x.category.includes(category));
+
+    renderProducts(selected);
 }
 
 function getByRating(minRating: number): void {
@@ -27,3 +29,19 @@ function getByRating(minRating: number): void {
 }
 
 export { renderProducts, getByCategory, getByRating };
+
+// display all products categorized as “Electronics”
+const electronics = document.getElementById("electronics");
+
+electronics?.addEventListener("click", (event) => {
+    event.preventDefault();
+    getByCategory("Electronics");
+});
+
+// display all products categorized as “Clothing”
+const clothing = document.getElementById("clothing");
+
+clothing?.addEventListener("click", (event) => {
+    event.preventDefault();
+    getByCategory("Clothing");
+});
