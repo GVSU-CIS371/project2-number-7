@@ -34,4 +34,3 @@ function getByRating(minRating: number): void {
 }
 
 export { renderProducts, getByCategory, getByRating };
-

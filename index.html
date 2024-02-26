@@ -27,16 +27,12 @@
       <script type="module">
         import { products } from './src/data.ts';
         import { renderProducts, getByCategory, getByRating } from './src/data-controller.ts';
+
         renderProducts(products);
 
         // Bind click events using .addEventListener to the navigation links. Upon clicking:
 
         // - "Electronics" should display all products categorized as "Electronics."
-        // - "Clothing" should display all products categorized as "Clothing."
-        // - "Groceries" should display all products categorized as "Groceries."
-        // - "Best Seller" should display all products with a rating greater than 4.5.
-
-        
         // display all products categorized as “Electronics”
         const electronics = document.getElementById("electronics");
 
@@ -45,6 +41,7 @@
             getByCategory("Electronics");
         });
 
+        // - "Clothing" should display all products categorized as "Clothing."
         // display all products categorized as “Clothing”
         const clothing = document.getElementById("clothing");
 
@@ -53,7 +50,15 @@
             getByCategory("Clothing");
         });
 
-        // display all products
+        // - "Groceries" should display all products categorized as "Groceries."
+        // - "Best Seller" should display all products with a rating greater than 4.5.
+
+        
+        
+
+        
+
+        // display all products when clicking "My Store"
         const home = document.getElementById("home");
 
         home?.addEventListener("click", (event) => {
