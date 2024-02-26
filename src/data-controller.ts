@@ -35,26 +35,3 @@ function getByRating(minRating: number): void {
 
 export { renderProducts, getByCategory, getByRating };
 
-// display all products categorized as “Electronics”
-const electronics = document.getElementById("electronics");
-
-electronics?.addEventListener("click", (event) => {
-    event.preventDefault();
-    getByCategory("Electronics");
-});
-
-// display all products categorized as “Clothing”
-const clothing = document.getElementById("clothing");
-
-clothing?.addEventListener("click", (event) => {
-    event.preventDefault();
-    getByCategory("Clothing");
-});
-
-// display all products
-const home = document.getElementById("home");
-
-home?.addEventListener("click", (event) => {
-    event.preventDefault();
-    renderProducts(products);
-});
