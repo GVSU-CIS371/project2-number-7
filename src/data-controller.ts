@@ -13,6 +13,11 @@ function renderProducts(prods: Product[]): void {
     const allProductHTML = prods.map((prod: Product) => generateProductHTML(prod));
     let mainTop = document.getElementById("main-container");
 
+    // Clear existing products
+    if (mainTop) {
+        mainTop.innerHTML = '';
+    }
+
     for(const prodHTML of allProductHTML){
         mainTop!.innerHTML += prodHTML;
     }
@@ -44,4 +49,12 @@ const clothing = document.getElementById("clothing");
 clothing?.addEventListener("click", (event) => {
     event.preventDefault();
     getByCategory("Clothing");
+});
+
+// display all products
+const home = document.getElementById("home");
+
+home?.addEventListener("click", (event) => {
+    event.preventDefault();
+    renderProducts(products);
 });
